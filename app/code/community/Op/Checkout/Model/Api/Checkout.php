@@ -233,7 +233,7 @@ class Op_Checkout_Model_Api_Checkout extends Mage_Core_Model_Abstract
             [
                 'stamp' => hash('sha256', time() . $order->getIncrementId()),
                 'reference' => $order->getIncrementId(),
-                'amount' => $order->getGrandTotal() * 100,
+                'amount' => round($order->getGrandTotal() * 100),
                 'currency' => $order->getOrderCurrencyCode(),
                 'language' => 'FI',
                 'items' => $this->getOrderItems($order),
@@ -293,7 +293,7 @@ class Op_Checkout_Model_Api_Checkout extends Mage_Core_Model_Abstract
 
         foreach ($this->_itemArgs($order) as $i => $item) {
             $items[] = array(
-                'unitPrice' => $item['price'] * 100,
+                'unitPrice' => round($item['price'] * 100),
                 'units' => $item['amount'],
                 'vatPercentage' => $item['vat'],
                 'description' => $item['title'],
