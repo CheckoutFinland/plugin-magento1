@@ -1,3 +1,8 @@
+<img src="https://img.shields.io/badge/WARNING-END%20OF%20LIFE-critical?style=for-the-badge" />
+
+__**DUE TO MAGENTO 1 SUNSET, THIS PLUGIN IS NO LONGER MAINTAINED**__
+
+
 # OP Payment Service Magento 1 Module
 Checkout Finland's payment methods for your Magento 1 web store
 
